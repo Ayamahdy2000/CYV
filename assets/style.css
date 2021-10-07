@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+html {
+  -webkit-font-smoothing: antialiased;
+  --scrollbarBG: #ffff;
+  --thumbBG: #7F66D8;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+}
+
+.bg-light {
+  background-color: transparent !important;
+  padding: 15px 20px;
+}
+
+.navbar-light .navbar-text {
+  color: rgba(0, 0, 0, 0.55);
+  margin-left: auto;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #000000;
+}
+
+.row {
+  align-items: center;
+}
+
+header p {
+  font-size: 30px;
+}
+header nav ul li {
+  margin: 0 10px;
+}
+
+#About {
+  margin-top: 10rem;
+}
+#About .bg {
+  position: relative;
+}
+#About .mobile {
+  position: absolute;
+  inset: 0;
+  left: 18%;
+}
+#About ul li {
+  font-size: 20px;
+}
+#About .d-flex {
+  width: 100%;
+}
+#About .d-flex:hover .num {
+  background-color: #7f66d8;
+  color: #ffffff;
+  position: relative;
+}
+#About .d-flex:hover .num::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  margin: 0 0 4px;
+  background-color: transparent;
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(127, 102, 216, 0.28);
+}
+#About .d-flex:hover p {
+  font-size: 16px;
+  color: #7F66D8;
+  margin-bottom: 7px;
+}
+@media screen and (max-width: 480px) {
+  #About .d-flex:hover p {
+    font-size: 14px;
+  }
+  #About .d-flex:hover p.heading {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #About .d-flex:hover p {
+    font-size: 12px;
+  }
+  #About .d-flex:hover p.heading {
+    font-size: 12px;
+  }
+}
+#About .d-flex:hover p.heading {
+  font-weight: 700;
+  font-size: 18px;
+  color: #7F66D8;
+  margin-bottom: 0px;
+}
+@media screen and (max-width: 480px) {
+  #About .d-flex:hover p.heading {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #About .d-flex:hover p.heading {
+    font-size: 14px;
+  }
+}
+#About .d-flex .rightSide {
+  margin: 0 35px;
+}
+@media screen and (max-width: 390px) {
+  #About .d-flex .rightSide {
+    margin: 0px 5px 0 0;
+  }
+}
+@media screen and (max-width: 300px) {
+  #About .d-flex .rightSide {
+    margin: 0px 5px 15px 0;
+  }
+}
+#About .d-flex .rightSide div {
+  height: 120px;
+}
+#About .d-flex .num {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(127, 102, 216, 0.11);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 33px;
+  color: #7F66D8;
+  padding: 5px 0 0;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+#About .d-flex p {
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 7px;
+  transition: color 0.5s ease;
+}
+@media screen and (max-width: 480px) {
+  #About .d-flex p {
+    font-size: 14px;
+  }
+  #About .d-flex p.heading {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #About .d-flex p {
+    font-size: 12px;
+  }
+  #About .d-flex p.heading {
+    font-size: 12px;
+  }
+}
+#About .d-flex p.heading {
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 0px;
+}
+@media screen and (max-width: 480px) {
+  #About .d-flex p.heading {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #About .d-flex p.heading {
+    font-size: 14px;
+  }
+}
+
+#Goals {
+  margin-top: 10rem;
+}
+@media screen and (max-width: 390px) {
+  #Goals img {
+    width: 250px !important;
+  }
+}
+#Goals h3 {
+  margin-bottom: 15rem;
+}
+#Goals #carousel {
+  position: relative;
+  height: 350px;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+#Goals #carousel div {
+  position: absolute;
+  transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+  opacity: 1;
+}
+#Goals #carousel div img {
+  width: 400px;
+  transition: width 1s;
+}
+#Goals #carousel div.hideLeft {
+  left: 0%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+#Goals #carousel div.hideLeft img {
+  width: 200px;
+}
+#Goals #carousel div.hideRight {
+  left: 100%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+#Goals #carousel div.hideRight img {
+  width: 200px;
+}
+#Goals #carousel div.prev {
+  z-index: 5;
+  left: 30%;
+  transform: translateY(50px) translateX(-50%);
+  cursor: pointer;
+}
+#Goals #carousel div.prev img {
+  width: 300px;
+}
+#Goals #carousel div.prevLeftSecond {
+  z-index: 4;
+  left: 15%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+#Goals #carousel div.prevLeftSecond img {
+  width: 200px;
+}
+#Goals #carousel div.selected {
+  z-index: 10;
+  left: 50%;
+  transform: translateY(0px) translateX(-50%);
+}
+#Goals #carousel div.next {
+  z-index: 5;
+  left: 70%;
+  transform: translateY(50px) translateX(-50%);
+  cursor: pointer;
+}
+#Goals #carousel div.next img {
+  width: 300px;
+}
+#Goals #carousel div.nextRightSecond {
+  z-index: 4;
+  left: 85%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+#Goals #carousel div.nextRightSecond img {
+  width: 200px;
+}
+#Goals .buttons {
+  position: relative;
+  bottom: 8rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  text-align: center;
+  color: #FF4265;
+  font-size: 38px;
+}
+
+.pointer {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.card {
+  width: 400px;
+  height: 400px;
+}
+
+#Services .d-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#Services .row {
+  align-items: start;
+}
+#Services p {
+  font-size: 18px;
+}
+#Services p.heading {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+footer p {
+  font-size: 14px;
+}
+@media screen and (max-width: 400px) {
+  footer p {
+    font-size: 12px;
+  }
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  margin: 40px 0;
+  padding: 0;
+}
+footer ul li {
+  margin: 0 35px 0px 0;
+}
+
+/*# sourceMappingURL=style.css.map */
